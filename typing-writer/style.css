@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+body p{
+    display: inline-block;
+    background-color: gray;
+    color: #fff;
+    margin: 0 35%;
+    font-size: 28px;
+}
