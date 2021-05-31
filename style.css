@@ -7,15 +7,89 @@
 html {
   display: block;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  height: 768px;
+  background: -webkit-gradient(linear, left top, right top, from(#000000), to(#6b6b6b));
+  background: linear-gradient(90deg, #000000, #6b6b6b);
 }
 
 /*Reset CSS*/
 body {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  margin: 4%;
+  border: 1px solid #42424269;
+}
+
+header {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 46px;
+  bottom: 0;
+  background-color: #c5c5c5;
+  border: 1px solid gray;
+}
+
+header ul#menu {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #18181879;
+  position: absolute;
+  top: -1189%;
+  left: 1%;
+  background-color: #c4c4c4;
+  width: 250px;
+  height: auto;
+  padding: 1em 0em 0 0;
+  -webkit-box-shadow: 8px 0px 20px 11px #0000005b;
+          box-shadow: 8px 0px 20px 11px #0000005b;
+  list-style: none;
+}
+
+header ul#menu li {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 2em 0;
+  padding: 1em;
+}
+
+header ul#menu li::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #f7f7f7;
+  left: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  motion-path: fill-box;
+}
+
+header ul#menu li a {
+  text-decoration: none;
+  color: #222222;
+}
+
+header ul#menu li:hover a {
+  color: red;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+header ul#menu li:hover:after {
+  width: 100%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 /*# sourceMappingURL=style.css.map */
