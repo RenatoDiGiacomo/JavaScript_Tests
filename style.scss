@@ -5,6 +5,19 @@
     padding: 0;
 }
 
+
+/*Reset CSS*/
+
+
+/*VARS*/
+
+@mixin fonts {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*VARS*/
+
 html {
     display: block;
     -webkit-box-sizing: border-box;
@@ -19,17 +32,21 @@ html {
 /*Reset CSS*/
 
 body {
+    font: fonts;
     position: relative;
     width: inherit;
     height: inherit;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f7f7f7;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 4%;
     border: 1px solid #42424269;
 }
 
 header {
+    z-index: 999;
     position: absolute;
     display: block;
     width: 100%;
@@ -40,52 +57,54 @@ header {
     ul#menu {
         box-sizing: border-box;
         position: absolute;
-        top: -1189%;
+        top: -815%;
         left: 1%;
+        opacity: 0;
         background-color: #c4c4c4;
         width: 250px;
         height: auto;
         padding: 1em 0em 0 0;
         box-shadow: 8px 0px 20px 11px #0000005b;
         list-style: none;
+        transform: translateX(1px);
+        transition: all .1s linear;
+        &.active {
+            top: -815%;
+            opacity: 1;
+            transition: all .1s linear;
+        }
         li {
             position: relative;
             display: block;
             box-sizing: border-box;
             width: 100%;
             height: auto;
-            margin: 2em 0;
+            margin: .5em 0;
             padding: 1em;
-            &::after {
-                position: absolute;
-                display: block;
-                content: "";
-                width: 0%;
-                height: 1px;
-                background-color: #f7f7f7;
-                left: 0;
-                transition: all 0.3s linear;
-                motion-path: fill-box;
-            }
             a {
                 text-decoration: none;
                 color: #222222;
-                ;
-            }
-            &:hover a {
-                color: red;
-                transition: all 0.3s linear;
-            }
-            &:hover:after {
-                width: 100%;
-                transition: all 0.3s linear;
+                font-weight: 700;
             }
         }
     }
     .startmenu {
         display: inline-block;
-        border: 1px solid red;
+        border: 1px solid #0000005b;
+        box-shadow: 2px 4px #0000005b;
         padding: .5em 2em;
-        margin: .5em;
+        margin: .3em;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all .2s linear;
+        &::before {
+            display: inline-block;
+            content: "☩";
+            margin-right: .5em;
+        }
+        &:hover {
+            box-shadow: 0px 2px #0000005b;
+            transition: all .2s linear;
+        }
     }
 }

@@ -21,5 +21,18 @@ function initList() {
     menu.innerHTML = menueach()
 
 }
-initList()
-const
+initList();
+
+const startmenu = document.querySelector('.startmenu');
+
+function menuselect() {
+    console.log('funciona')
+    const menu = document.getElementById('menu')
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active')
+    } else {
+        menu.classList.add('active')
+    }
+}
+
+startmenu.addEventListener('click', menuselect)

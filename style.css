@@ -1,9 +1,13 @@
+@charset "UTF-8";
 /*Reset CSS*/
 * {
   margin: 0;
   padding: 0;
 }
 
+/*Reset CSS*/
+/*VARS*/
+/*VARS*/
 html {
   display: block;
   -webkit-box-sizing: border-box;
@@ -17,17 +21,21 @@ html {
 
 /*Reset CSS*/
 body {
+  font: fonts;
   position: relative;
   width: inherit;
   height: inherit;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #f7f7f7;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 4%;
   border: 1px solid #42424269;
 }
 
 header {
+  z-index: 999;
   position: absolute;
   display: block;
   width: 100%;
@@ -41,8 +49,9 @@ header ul#menu {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
-  top: -1189%;
+  top: -815%;
   left: 1%;
+  opacity: 0;
   background-color: #c4c4c4;
   width: 250px;
   height: auto;
@@ -50,6 +59,17 @@ header ul#menu {
   -webkit-box-shadow: 8px 0px 20px 11px #0000005b;
           box-shadow: 8px 0px 20px 11px #0000005b;
   list-style: none;
+  -webkit-transform: translateX(1px);
+          transform: translateX(1px);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+header ul#menu.active {
+  top: -815%;
+  opacity: 1;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
 header ul#menu li {
@@ -59,37 +79,39 @@ header ul#menu li {
           box-sizing: border-box;
   width: 100%;
   height: auto;
-  margin: 2em 0;
+  margin: .5em 0;
   padding: 1em;
-}
-
-header ul#menu li::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 0%;
-  height: 1px;
-  background-color: #f7f7f7;
-  left: 0;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  motion-path: fill-box;
 }
 
 header ul#menu li a {
   text-decoration: none;
   color: #222222;
+  font-weight: 700;
 }
 
-header ul#menu li:hover a {
-  color: red;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+header .startmenu {
+  display: inline-block;
+  border: 1px solid #0000005b;
+  -webkit-box-shadow: 2px 4px #0000005b;
+          box-shadow: 2px 4px #0000005b;
+  padding: .5em 2em;
+  margin: .3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
-header ul#menu li:hover:after {
-  width: 100%;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+header .startmenu::before {
+  display: inline-block;
+  content: "☩";
+  margin-right: .5em;
+}
+
+header .startmenu:hover {
+  -webkit-box-shadow: 0px 2px #0000005b;
+          box-shadow: 0px 2px #0000005b;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 /*# sourceMappingURL=style.css.map */
