@@ -7,6 +7,8 @@ body p{
     display: inline-block;
     background-color: gray;
     color: #fff;
-    margin: 0 35%;
+    margin: 1px calc(2rem + 1vw);
     font-size: 28px;
+    width: auto;
+    padding: 21px;
 }
