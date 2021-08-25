@@ -1,110 +1,22 @@
 /*Reset CSS*/
 
-* {
+body{
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
+    color: #080808;
 }
-
-
-/*Reset CSS*/
-
-
-/*VARS*/
-
-@mixin fonts {
-    font-family: 'Times New Roman', Times, serif;
+@for $i from 1 to 6 {
+    h#{$i},p{
+        display: block;
+        margin: 0;
+        padding: 0%;
+    }   
 }
-
-
-/*VARS*/
-
-html {
+span,ul,li,ol,div{
     display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    height: 768px;
-    background: linear-gradient(90deg, #000000, #6b6b6b);
+    padding: 0%;
 }
-
 
 /*Reset CSS*/
-
-body {
-    font: fonts;
-    position: relative;
-    width: inherit;
-    height: inherit;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 4%;
-    border: 1px solid #42424269;
-}
-
-header {
-    z-index: 999;
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 46px;
-    bottom: 0;
-    background-color: #c5c5c5;
-    border: 1px solid gray;
-    ul#menu {
-        box-sizing: border-box;
-        position: absolute;
-        top: -815%;
-        left: 1%;
-        opacity: 0;
-        background-color: #c4c4c4;
-        width: 250px;
-        height: auto;
-        padding: 1em 0em 0 0;
-        box-shadow: 8px 0px 20px 11px #0000005b;
-        list-style: none;
-        transform: translateX(1px);
-        transition: all .1s linear;
-        &.active {
-            top: -815%;
-            opacity: 1;
-            transition: all .1s linear;
-        }
-        li {
-            position: relative;
-            display: block;
-            box-sizing: border-box;
-            width: 100%;
-            height: auto;
-            margin: .5em 0;
-            padding: 1em;
-            a {
-                text-decoration: none;
-                color: #222222;
-                font-weight: 700;
-            }
-        }
-    }
-    .startmenu {
-        display: inline-block;
-        border: 1px solid #0000005b;
-        box-shadow: 2px 4px #0000005b;
-        padding: .5em 2em;
-        margin: .3em;
-        text-transform: uppercase;
-        font-weight: 700;
-        transition: all .2s linear;
-        &::before {
-            display: inline-block;
-            content: "☩";
-            margin-right: .5em;
-        }
-        &:hover {
-            box-shadow: 0px 2px #0000005b;
-            transition: all .2s linear;
-        }
-    }
-}
